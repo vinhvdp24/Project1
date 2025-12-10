@@ -64,9 +64,9 @@ app.get('/', (req, res) => {
     res.send('Backend API is running.');
 });
 
-// Khởi động server sau khi setup database thành công
+
 setupDatabase().then(() => {
-    app.listen(PORT, () => {
+    app.listen(PORT, () => { // <--- CHỈ DÙNG PORT THU ĐƯỢC
         console.log(`Server is running on port ${PORT}`);
         console.log(`Access API endpoint at http://localhost:${PORT}/api/products`);
     });
