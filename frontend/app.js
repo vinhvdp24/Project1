@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Địa chỉ Backend API 
     // CHÚ Ý: Sử dụng localhost:8000 để chạy thử trên máy tính cá nhân
-    const BACKEND_URL = 'http://localhost:8000/api/products'; 
+    const BACKEND_URL = 'https://project1-9kvv.onrender.com/api/products'; 
     
     // Khi triển khai xong lên Render, bạn sẽ thay thế dòng trên bằng domain thực tế:
     // const BACKEND_URL = 'https://<your-render-domain-here>/api/products'; 
