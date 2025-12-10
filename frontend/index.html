@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List from API</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        #product-list { border-collapse: collapse; width: 80%; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        #product-list th, #product-list td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        #product-list th { background-color: #4CAF50; color: white; }
+        .error { color: #D8000C; background-color: #FFD2D2; padding: 10px; border: 1px solid #D8000C; border-radius: 4px; }
+        #status { padding: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Danh sách Sản phẩm</h1>
+    
+    <p>Dữ liệu được lấy từ Backend API (endpoint: /api/products).</p>
+
+    <div id="status">Đang tải dữ liệu...</div>
+    
+    <table id="product-list">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Sản phẩm</th>
+                <th>Giá (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
