@@ -58,6 +58,7 @@ app.get('/api/products', async (req, res) => {
         res.status(500).json({ error: 'Failed to retrieve products' });
     }
 });
+console.log('Routing for /api/products established.');
 
 // Endpoint đơn giản cho mục đích kiểm tra sức khỏe server (health check)
 app.get('/', (req, res) => {
