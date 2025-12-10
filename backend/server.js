@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 // Render sẽ cung cấp PORT thông qua biến môi trường, nếu không có thì dùng 8000 (Local)
-const PORT = process.env.PORT || 8000; 
+const PORT = process.env.PORT || 10000;
 const DB_PATH = path.join(__dirname, 'database.sqlite');
 
 // Middleware để cho phép CORS (quan trọng để Frontend có thể gọi API)
