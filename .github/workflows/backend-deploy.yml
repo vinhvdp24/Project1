@@ -1,0 +1,26 @@
+name: Deploy Backend to Render
+
+on:
+  push:
+    branches:
+      - main # Kích hoạt khi có commit mới trên nhánh main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Basic Code Check
+        run: echo "Code checked successfully."
+
+      # Kích hoạt triển khai Render bằng Deploy Hook
+      - name: Trigger Render Deployment
+        env:
+          # LƯU Ý: Đảm bảo bạn đã thêm biến này vào GitHub Secrets
+          RENDER_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }} 
+        run: |
+          echo "Triggering deployment for Backend on Render..."
+          curl -X POST $RENDER_HOOK
+          echo "Render Deployment Triggered Successfully."
